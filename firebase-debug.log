@@ -1,0 +1,73 @@
+[debug] [2023-03-12T09:49:20.073Z] ----------------------------------------------------------------------
+[debug] [2023-03-12T09:49:20.078Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\barba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-03-12T09:49:20.079Z] CLI Version:   11.24.1
+[debug] [2023-03-12T09:49:20.079Z] Platform:      win32
+[debug] [2023-03-12T09:49:20.080Z] Node Version:  v18.13.0
+[debug] [2023-03-12T09:49:20.082Z] Time:          Sun Mar 12 2023 03:49:20 GMT-0600 (Central Standard Time)
+[debug] [2023-03-12T09:49:20.082Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-12T09:49:20.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-12T09:49:20.374Z] > authorizing via signed-in user (thecosmeticdesigner@gmail.com)
+[debug] [2023-03-12T09:49:20.375Z] [iam] checking project social-network-work for permissions ["firebase.projects.get"]
+[debug] [2023-03-12T09:49:20.380Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions [none]
+[debug] [2023-03-12T09:49:20.381Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions x-goog-quota-user=projects/social-network-work
+[debug] [2023-03-12T09:49:20.382Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-12T09:49:21.000Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions 200
+[debug] [2023-03-12T09:49:21.001Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-12T09:49:21.004Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work [none]
+[debug] [2023-03-12T09:49:21.405Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work 200
+[debug] [2023-03-12T09:49:21.405Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work {"projectId":"social-network-work","projectNumber":"96646576824","displayName":"Social Network Work","name":"projects/social-network-work","resources":{"hostingSite":"social-network-work"},"state":"ACTIVE","etag":"1_65b1f465-bc29-4e73-9316-9558b1fa0e12"}
+[info] 
+[info] === Serving from 'C:\Users\barba\OneDrive\Documents\GitHub\Social Network por baby\DEV004-social-network'...
+[info] 
+[debug] [2023-03-12T09:49:21.420Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/social-network-work/sites 
+[debug] [2023-03-12T09:49:22.221Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/social-network-work/sites 200
+[debug] [2023-03-12T09:49:22.222Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/social-network-work/sites {"sites":[{"name":"projects/social-network-work/sites/social-network-work","defaultUrl":"https://social-network-work.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-12T09:49:22.223Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work/webApps/-/config [none]
+[debug] [2023-03-12T09:49:22.740Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work/webApps/-/config 200
+[debug] [2023-03-12T09:49:22.741Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work/webApps/-/config {"projectId":"social-network-work","appId":"1:96646576824:web:79181247892f9bbddc124d","storageBucket":"social-network-work.appspot.com","apiKey":"AIzaSyCMKdg-KtyG8JgUWoHQ01STgqqPBwhIMQE","authDomain":"social-network-work.firebaseapp.com","messagingSenderId":"96646576824"}
+[debug] [2023-03-12T09:49:22.786Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work [none]
+[debug] [2023-03-12T09:49:23.244Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work 200
+[debug] [2023-03-12T09:49:23.244Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work {"projectId":"social-network-work","projectNumber":"96646576824","displayName":"Social Network Work","name":"projects/social-network-work","resources":{"hostingSite":"social-network-work"},"state":"ACTIVE","etag":"1_65b1f465-bc29-4e73-9316-9558b1fa0e12"}
+[info] i  hosting[social-network-work]: Serving hosting files from: src {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1msrc\u001b[22m"}}
+[info] +  hosting[social-network-work]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] Shutting down...
+[debug] [2023-03-12T09:54:26.474Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\barba\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-03-12T09:55:59.084Z] ----------------------------------------------------------------------
+[debug] [2023-03-12T09:55:59.087Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\barba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-03-12T09:55:59.088Z] CLI Version:   11.24.1
+[debug] [2023-03-12T09:55:59.089Z] Platform:      win32
+[debug] [2023-03-12T09:55:59.089Z] Node Version:  v18.13.0
+[debug] [2023-03-12T09:55:59.090Z] Time:          Sun Mar 12 2023 03:55:59 GMT-0600 (Central Standard Time)
+[debug] [2023-03-12T09:55:59.091Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-12T09:55:59.309Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-12T09:55:59.310Z] > authorizing via signed-in user (thecosmeticdesigner@gmail.com)
+[debug] [2023-03-12T09:55:59.310Z] [iam] checking project social-network-work for permissions ["firebase.projects.get"]
+[debug] [2023-03-12T09:55:59.314Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions [none]
+[debug] [2023-03-12T09:55:59.314Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions x-goog-quota-user=projects/social-network-work
+[debug] [2023-03-12T09:55:59.315Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-12T09:56:00.211Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions 200
+[debug] [2023-03-12T09:56:00.212Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/social-network-work:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-12T09:56:00.215Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work [none]
+[debug] [2023-03-12T09:56:00.610Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work 200
+[debug] [2023-03-12T09:56:00.611Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work {"projectId":"social-network-work","projectNumber":"96646576824","displayName":"Social Network Work","name":"projects/social-network-work","resources":{"hostingSite":"social-network-work"},"state":"ACTIVE","etag":"1_65b1f465-bc29-4e73-9316-9558b1fa0e12"}
+[info] 
+[info] === Serving from 'C:\Users\barba\OneDrive\Documents\GitHub\Social Network por baby\DEV004-social-network'...
+[info] 
+[debug] [2023-03-12T09:56:00.629Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/social-network-work/sites 
+[debug] [2023-03-12T09:56:01.427Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/social-network-work/sites 200
+[debug] [2023-03-12T09:56:01.428Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/social-network-work/sites {"sites":[{"name":"projects/social-network-work/sites/social-network-work","defaultUrl":"https://social-network-work.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-12T09:56:01.428Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work/webApps/-/config [none]
+[debug] [2023-03-12T09:56:02.030Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work/webApps/-/config 200
+[debug] [2023-03-12T09:56:02.030Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work/webApps/-/config {"projectId":"social-network-work","appId":"1:96646576824:web:79181247892f9bbddc124d","storageBucket":"social-network-work.appspot.com","apiKey":"AIzaSyCMKdg-KtyG8JgUWoHQ01STgqqPBwhIMQE","authDomain":"social-network-work.firebaseapp.com","messagingSenderId":"96646576824"}
+[debug] [2023-03-12T09:56:02.076Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work [none]
+[debug] [2023-03-12T09:56:02.440Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work 200
+[debug] [2023-03-12T09:56:02.441Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/social-network-work {"projectId":"social-network-work","projectNumber":"96646576824","displayName":"Social Network Work","name":"projects/social-network-work","resources":{"hostingSite":"social-network-work"},"state":"ACTIVE","etag":"1_65b1f465-bc29-4e73-9316-9558b1fa0e12"}
+[info] i  hosting[social-network-work]: Serving hosting files from: src {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1msrc\u001b[22m"}}
+[info] +  hosting[social-network-work]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
