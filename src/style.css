@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+@import './css/login-signup.css';
+@import './css/create-post.css';
+@import './css/home.css';
+@import './css/nav.css';
+@import './css/post-card.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --clr-input:#EBE6F5;
+    --clr-btn:#8075FF;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+    --clr-violet: #0489f6;
+    --clr-postgray: #a9caeb;
+    background-color: rgba(122, 81, 147, 0.718);
+}
+
+
+
