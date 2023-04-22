@@ -58,8 +58,6 @@ export const signUp = () => {
       }
     }
   });
-  // button.textContent = "crear cuenta";
-  buttonBack.textContent = 'Regresa';
 
   buttonBack.addEventListener('click', () => {
     onNavigate('/');

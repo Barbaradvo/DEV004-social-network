@@ -43,13 +43,13 @@ export const Login = () => {
     console.log(email, password);
 
     try {
-      await login(email, password)
+      await login(email, password);
       onNavigate('/home');
 
       showMessage(`Welcome ${login.user.email}`, 'success');
     } catch (error) {
       if (error.code === 'auth/wrong-password') {
-        showMessage('Wrong password', 'error'); 
+        showMessage('Wrong password', 'error');
       } else if (error.code === 'auth/user-not-found') {
         showMessage('User not found', 'error');
       } else if (error.code) {
@@ -57,12 +57,6 @@ export const Login = () => {
       }
     }
   });
-
-  /* AGREGAR TEXTO A LOS BOTONES textContent */
-  button.textContent = 'Entrar';
-  buttonBack.textContent = 'Regresa';
-  buttonProfile.textContent = 'Profile';
-  title.textContent = 'Inicia secion LOGIN';
 
   button.addEventListener('click', () => {
     onNavigate('/home');

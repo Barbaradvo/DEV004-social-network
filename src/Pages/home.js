@@ -21,7 +21,7 @@ export const home = () => {
     </nav>
     <h2> We can Hear you</h2>
           <button id='createPost' class="create-home">
-          Add</button>    
+          Post</button>    
                         
   </header>
   <aside class='aside'>
@@ -33,6 +33,18 @@ export const home = () => {
   logoHome.addEventListener('click', () => {
     document.querySelector('.nav-container').classList.toggle('show');
   });
+
+  /// Editar
+  function EditPosts(postsContainer) {
+    const btnEdit = postsContainer.querySelectorAll('.btn-edit');
+    console.log('btnEdit : ', btnEdit);
+    btnEdit.forEach((btn) => {
+      btn.addEventListener('click', ({ target: { dataset } }) => {
+        console.log('id: ', dataset.id);
+        updateTask(dataset.id);
+      });
+    });
+  }
 
   /// ELIMINAR
   function EliminarPosts(postsContainer) {
@@ -58,6 +70,7 @@ export const home = () => {
         const postsContainer = section.querySelector('.posts'); // se repite
         postsContainer.innerHTML = htmlPosts;
         EliminarPosts(postsContainer);
+        EditPosts(postsContainer);
 
         const navSelector = section.querySelector('#nav');
         navSelector.appendChild(nav());

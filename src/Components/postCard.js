@@ -20,27 +20,21 @@ export const setupPosts = (data, user) => {
               </aside>
             </aside>
             <aside class="options-post">
-              <button class='btn-delete' data-id="${doc.id}">
-                delete
-              </button>
-            
+              <button class='btn-delete' data-id="${doc.id}"> delete </button> <br>
+            <button class = 'btn-edit' data id = "${doc.id} "> edit </button>
           </section>
           <section class="card">
            
             <section class="description-box">
               <p class="pp">${post.description}</p>
-              
-            </section>  
+               </section>  
           </section>
           <section class="interaction-box">
             <figure class=" item">
             <img id="like" src="./images/like-icon.svg" alt="" class="icon-post">
              
             </figure>
-            <figure class="item">
-              <img src="./images/comment.png" alt="" class="icon-post">
-              <p class="count">13</p>
-            </figure>
+           
           </section>
         </article>
               `;
