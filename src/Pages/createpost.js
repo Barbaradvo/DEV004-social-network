@@ -2,6 +2,8 @@ import { saveTask } from '../Firebase/firestore.js';
 import { currentUser } from '../Firebase/auth.js';
 import { nav } from '../Components/nav.js';
 import { onNavigate } from '../router.js';
+import wispIcon from '../Images/iconosombra.png';
+import check from '../Images/check.png';
 
 export const createPost = () => {
   const div = document.createElement('div');
@@ -10,7 +12,7 @@ export const createPost = () => {
   <header class='header-home'>
     <nav id="nav">  
       <picture id="logo-home" class="logo-container">
-        <img src="./images/iconosombra.png" alt="Sonder icon">
+        <img src=${wispIcon}  alt="Wisp icon">
       </picture> 
     </nav>
       <h1>Share with us</h1>
@@ -26,7 +28,7 @@ export const createPost = () => {
             <input id="post-description" type="text" autocomplete="off" placeholder="Share your feelings" >
 
             <button id="btn-task-save" class="check">
-            <img src="./images/check.png" alt="button check" class="check">
+            <img src=${check} alt="button check" class="check">
             </button>
         
     </form>

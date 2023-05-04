@@ -27,7 +27,7 @@ export const setupPosts = (data) => {
           </section>
           <section class="interaction-box">
             <figure class=" item">
-            <img id="like" src="./images/like-icon.svg" alt="" class="icon-post">
+    
              
             </figure>
            

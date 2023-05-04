@@ -9,6 +9,8 @@ import {
 import { onNavigate } from '../router.js';
 import { setupPosts } from '../Components/postCard.js';
 import { nav } from '../Components/nav.js';
+import wispIcon from '../Images/iconosombra.png';
+
 // import { auth, db } from '../firebase/config.js';
 
 export const home = () => {
@@ -19,7 +21,7 @@ export const home = () => {
   <header class='header-home'>
     <nav id="nav">  
       <picture id="logo-home" class="logo-container">
-        <img src="./images/iconosombra.png" alt="Wisp icon">
+        <img src=${wispIcon} alt="Wisp icon">
       </picture> 
       
     </nav>

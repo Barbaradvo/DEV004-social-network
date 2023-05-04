@@ -1,6 +1,7 @@
 import { login } from '../Firebase/auth.js';
 import { showMessage } from '../Components/ShowMessage.js';
 import { onNavigate } from '../router.js';
+import wispIcon from '../Images/iconosombra.png';
 
 export const Login = () => {
   /* UN CONTENEDOR Q CONTENGA A LOS BOTONES */
@@ -14,7 +15,7 @@ export const Login = () => {
   section.innerHTML = `
     <div class="wrapper">
       <div class="img-container">
-        <img src="./images/iconosombra.png" alt="">
+        <img src=${wispIcon} alt="">
       </div>
       <h1>Log In</h1>
       <p class="text" >Hello Wisper, so glad to see you!</p>

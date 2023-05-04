@@ -2,6 +2,7 @@
 import { onNavigate } from '../router.js';
 import { addUser } from '../Firebase/auth.js';
 import { showMessage } from '../Components/ShowMessage.js';
+import wispIcon from '../Images/iconosombra.png';
 
 export const signUp = () => {
   /* UN CONTENEDOR Q CONTENGA A LOS BOTONES */
@@ -13,7 +14,7 @@ export const signUp = () => {
   section.innerHTML = `
     <div class="wrapper">
       <div class="img-container">
-        <img src="./images/iconosombra.png" alt="">
+        <img src=${wispIcon} alt="">
       </div>
       <h1>Sign Up</h1>
       <p class="text-sign">Someone out there is willing to hear you!</p>

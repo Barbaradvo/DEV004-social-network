@@ -1,4 +1,5 @@
 import { onNavigate } from '../router';
+import wispIcon from '../Images/iconosombra.png';
 
 export const profile = () => {
   /* UN CONTENEDOR Q CONTENGA A LOS BOTONES */
@@ -10,7 +11,7 @@ export const profile = () => {
   section.innerHTML = `
         <div class="wrapper">
           <div class="img-container">
-            <img src="./images/iconosombra.png" alt="">
+            <img src=${wispIcon} alt="">
           </div>
           <h1>Profile</h1>
           <button id='logout' class="facebook">Log Out</button>
