@@ -3,7 +3,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  sendPasswordResetEmail,
 } from 'firebase/auth';
 import { app } from './config.js';
 
@@ -14,6 +13,5 @@ export const addUser = (email, password) => createUserWithEmailAndPassword(auth,
 
 export const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
-export const recoverPassword = (email) => sendPasswordResetEmail(email);
 export const logOut = () => signOut(auth);
 export const currentUser = () => auth.currentUser;

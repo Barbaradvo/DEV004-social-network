@@ -14,7 +14,7 @@
     "htmlhint": "htmlhint dist/*.html ",
     "eslint": "eslint --ext .js src/ test/",
     "stylelint": "stylelint --aei src/**/*.css",
-    "pretest": "npm run htmlhint && npm run eslint && npm run stylelint",
+    "_pretest": "npm run htmlhint && npm run eslint && npm run stylelint",
     "test": "jest --coverage",
     "dev": "vite dev src",
     "start": "npm run dev",
@@ -43,6 +43,7 @@
     "commit": "36bf90dc273bab8ffe9546b09eece6a132f8a669"
   },
   "dependencies": {
+    "@firebase/util": "^1.9.3",
     "firebase": "^9.17.2"
   }
 }

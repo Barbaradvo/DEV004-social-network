@@ -1,7 +1,11 @@
-import { collection, onSnapshot, query } from 'firebase/firestore';
+import {
+  collection, doc, onSnapshot, query,
+} from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../Firebase/auth.js';
-import { deleteTask, updateTask, db } from '../Firebase/firestore.js';
+import {
+  deleteTask, updateTask, getTask, db,
+} from '../Firebase/firestore.js';
 import { onNavigate } from '../router.js';
 import { setupPosts } from '../Components/postCard.js';
 import { nav } from '../Components/nav.js';
@@ -35,24 +39,41 @@ export const home = () => {
   });
 
   /// Editar
-  function EditPosts(postsContainer) {
+  function EditPosts(postsContainer, dataPost) {
+    const Repost = [];
+    dataPost.forEach((post) => { Repost.push({ id: post.id, ...post.data() }); });
+    console.log(Repost);
     const btnEdit = postsContainer.querySelectorAll('.btn-edit');
-    console.log('btnEdit : ', btnEdit);
     btnEdit.forEach((btn) => {
       btn.addEventListener('click', ({ target: { dataset } }) => {
-        console.log('id: ', dataset.id);
-        updateTask(dataset.id);
+        console.log('este es dataset', dataset.id);
+        const encontrarDescription = Repost.find((post) => post.id === dataset.id);
+        console.log(encontrarDescription);
+        // crear un elemento input
+        const input = document.createElement('input');
+        input.classList.add('edit-input');
+        input.value = encontrarDescription.description;
+        // set initial value to the current description
+        input.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') {
+          // update the post description when the user presses enter
+            updateTask(dataset.id, { description: event.target.value });
+            input.remove();
+            // remove the input element
+          }
+        });
+
+        // append the input element to the DOM
+        btn.parentElement.appendChild(input);
       });
     });
   }
-
   /// ELIMINAR
   function EliminarPosts(postsContainer) {
     const btnDelete = postsContainer.querySelectorAll('.btn-delete');
-    console.log('btnDelete : ', btnDelete);
+
     btnDelete.forEach((btn) => {
       btn.addEventListener('click', ({ target: { dataset } }) => {
-        console.log('id: ', dataset.id);
         deleteTask(dataset.id);
       });
     });
@@ -60,20 +81,16 @@ export const home = () => {
 
   /// MOSTRAR
   onAuthStateChanged(auth, (user) => {
-    console.log('USeR : ', user);
     if (user) {
       const myQuery = query(collection(db, 'post'));
       onSnapshot(myQuery, (data) => {
-        console.log('mi data', data);
-        data.forEach((d) => console.log('probando doc en home', d.data()));
+        data.forEach((d) => d.data());
+        console.log('revisando data', data);
         const htmlPosts = setupPosts(data, user);
         const postsContainer = section.querySelector('.posts'); // se repite
         postsContainer.innerHTML = htmlPosts;
         EliminarPosts(postsContainer);
-        EditPosts(postsContainer);
-
-        const navSelector = section.querySelector('#nav');
-        navSelector.appendChild(nav());
+        EditPosts(postsContainer, data);
       });
     } else {
       console.log('USUER : ', user);

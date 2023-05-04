@@ -33,3 +33,4 @@ window.onpopstate = () => {
 };
 
 root.append(component());
+console.log(root);
